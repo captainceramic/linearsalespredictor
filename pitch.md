@@ -26,7 +26,8 @@ What dark magic runs this app?
 <small>
 Why, its is a simple linear model! Check this out. Using linear regression we can predict the future.
 
-```{r}
+
+```r
 # Simply enter the known data.
 sales.data <- data.frame(years = c(2014, 2015), sales = c(1, 2))
 # Build a linear model using this simple syntax.
@@ -34,10 +35,9 @@ lin.model <- lm(sales ~ years, data = sales.data)
 
 # Now predict the future!
 future.val <- predict(lin.model, data.frame(years = 2016))
-
 ```
 
-This simple trick predicts a future sales value of ```r future.val```: that's a year-on-year increase of ```r 100*((future.val - sales.data$sales[2]) / sales.data$sales[2])```%!
+This simple trick predicts a future sales value of ``3``: that's a year-on-year increase of ``50``%!
 </small>
 
 Where can I get this?
